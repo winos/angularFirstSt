@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sd-12">
+			<div class="panel-heading">
+			 <h2>{{title}}</h2>
+			</div>
+			<div class="panel-body">
+				<div class="input-group">
+				  <span class="input-group-addon" id="basic-addon3">Filtering By Name</span>
+				  <input type="text" class="form-control" [(ngModel)] = "SearchName" >
+				</div>
+			</div>
+			<table class="table table-striped">
+			  <thead class="thead-inverse">
+			    <tr>
+			      <th>Name</th>
+			      <th>Last Name</th>
+			      <th>Contact Profile</th>
+			      <th>Title</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr style="cursor: pointer;"  *ngFor='let contact of contacts | FilterName : SearchName' (click)="WatchProfile(contact.id)">
+			      <th scope="row">{{ contact.firstName }}</th>
+			      <td>{{ contact.lastName }}</td>			      
+			      <td>{{ contact.profile }}</td>
+			      <td>{{ contact.title }}</td>
+			    </tr>
+			  </tbody>
+			</table>
+
+		</div>
+	</div>
+</div>

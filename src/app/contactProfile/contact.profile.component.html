@@ -1,0 +1,41 @@
+
+<div class="containter">
+	<div class="panel panel-success">
+	  <div class="panel-body">
+	    <h2>
+		   	<span class="glyphicon glyphicon-user" aria-hidden="true"></span>	
+		    {{contactInfo.firstName}} {{contactInfo.lastName}} 
+		    <small style="display: block;">Basic Information contact</small>     	
+	    </h2>	
+
+	  </div>
+	  <div class="panel-footer">
+		<ul>
+			<li>
+				<p>
+					<b>Contact id: </b>  
+					{{contactInfo.id}} 					
+				</p>
+			</li>
+			<li>
+				<p>
+					<b>Profile: </b>  
+					{{contactInfo.profile}} 					
+				</p>
+			</li>
+
+			<li>
+				<p>
+					<b>Outlet: </b>  
+					{{outletInfor.name}} 					
+				</p>
+			</li>
+
+		</ul>	    
+
+		<p style="text-align: center" >
+			<a class="btn btn-primary btn-sm" routerLink="/" role="button">Home</a>
+		</p>
+	  </div>
+	</div>	
+</div>
